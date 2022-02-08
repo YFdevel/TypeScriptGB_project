@@ -1,4 +1,5 @@
 import { renderBlock } from './lib.js';
+import { search, showData } from "./helpers.js";
 const currentDate = new Date();
 const minDateFormatted = currentDate.toISOString().split('T')[0];
 const maxDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 2, 0);
@@ -8,16 +9,16 @@ const inDateFormatted = inDate.toISOString().split('T')[0];
 const outDateFormatted = new Date(inDate.setDate(inDate.getDate() + 2)).toISOString().split('T')[0];
 export function renderSearchFormBlock(arrival = inDateFormatted, departure = outDateFormatted) {
     renderBlock('search-form-block', `
-    <form>
+    <form id="form">
       <fieldset class="search-fieldset">
         <div class="row">
           <div>
             <label for="city">Город</label>
-            <input id="city" type="text" disabled value="Санкт-Петербург" />
-            <input type="hidden" disabled value="59.9386,30.3141" />
+            <input id="city" type="text" name="city" value="Санкт-Петербург" />
+            <input type="hidden" name="location"  value="59.9386,30.3141" />
           </div>
           <div class="providers">
-            <label><input type="checkbox" name="provider" value="homy" checked /> Homy</label>
+            <label><input type="checkbox" name="provider" value="homy" checked/> Homy</label>
             <label><input type="checkbox" name="provider" value="flat-rent" checked /> FlatRent</label>
           </div>
         </div>
@@ -41,4 +42,11 @@ export function renderSearchFormBlock(arrival = inDateFormatted, departure = out
       </fieldset>
     </form>
     `);
+    const form = document.getElementById("form");
+    form.onsubmit = function (e) {
+        const data = search(e, (value) => {
+            console.log(value);
+        });
+        showData(data);
+    };
 }

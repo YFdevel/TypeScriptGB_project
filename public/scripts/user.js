@@ -4,7 +4,7 @@ export function renderUserBlock(userName, avatarLink, favoriteItemsAmount) {
     const hasFavoriteItems = favoriteItemsAmount >= 1;
     renderBlock('user-block', `
     <div class="header-container">
-      <img class="avatar" src=${avatarLink} alt=${userName} />
+      <img class="avatar" src=${avatarLink} alt='avatar-link' />
       <div class="info">
           <p class="name">${userName}</p>
           <p class="fav">
