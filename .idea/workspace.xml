@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e858976b-d898-4e2c-91da-25062be8a74c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/getFavoritesAmount.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/getUserData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scripts/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scripts/lib.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scripts/search-form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scripts/search-results.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scripts/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/search-form.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/search-form.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="243FVHCuL0FYGcV99Y31obsATkZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="D:\Programming\GeekBrains\Практика\TypeScript\TypeScriptProject_For_Git\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programming\GeekBrains\Практика\TypeScript\lesson1\public\img" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e858976b-d898-4e2c-91da-25062be8a74c" name="Changes" comment="" />
+      <created>1642851384375</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642851384375</updated>
+      <workItem from="1642851385674" duration="12384000" />
+      <workItem from="1642918912681" duration="10136000" />
+      <workItem from="1642997632110" duration="456000" />
+      <workItem from="1642998184157" duration="53000" />
+      <workItem from="1643907151264" duration="660000" />
+      <workItem from="1643914076435" duration="1020000" />
+      <workItem from="1643951499126" duration="2889000" />
+      <workItem from="1643972857477" duration="8405000" />
+      <workItem from="1644155488754" duration="16544000" />
+      <workItem from="1644208387650" duration="12473000" />
+      <workItem from="1644237525159" duration="11867000" />
+      <workItem from="1644297499027" duration="4905000" />
+      <workItem from="1644322803825" duration="388000" />
+      <workItem from="1644323456329" duration="325000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/public/scripts/helpers.js" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
