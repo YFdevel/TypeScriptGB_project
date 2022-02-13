@@ -1,4 +1,4 @@
-export interface User {
+export interface UserInterface {
   username: string
   avatarUrl?: string
 }
@@ -15,6 +15,8 @@ export interface SearchFormData {
 export interface Place {
 
 }
+
+
 
 export const search = (event, callback: (value?: Place[], error?: Error) => void): SearchFormData => {
   event.preventDefault();

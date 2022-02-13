@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e858976b-d898-4e2c-91da-25062be8a74c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/getFavoritesAmount.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/getUserData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/getCollection.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scripts/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scripts/lib.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scripts/search-form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scripts/search-results.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scripts/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getUserData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/getUserData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/search-form.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/search-form.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +26,17 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="243FVHCuL0FYGcV99Y31obsATkZ" />
   <component name="ProjectViewState">
@@ -75,7 +79,13 @@
       <workItem from="1644237525159" duration="11867000" />
       <workItem from="1644297499027" duration="4905000" />
       <workItem from="1644322803825" duration="388000" />
-      <workItem from="1644323456329" duration="325000" />
+      <workItem from="1644323456329" duration="2175000" />
+      <workItem from="1644430458200" duration="5091000" />
+      <workItem from="1644515462028" duration="7794000" />
+      <workItem from="1644569795334" duration="820000" />
+      <workItem from="1644582273311" duration="3279000" />
+      <workItem from="1644652424758" duration="5609000" />
+      <workItem from="1644771838954" duration="2765000" />
     </task>
     <servers />
   </component>
