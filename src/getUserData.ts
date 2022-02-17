@@ -4,12 +4,12 @@ const userStorage: UserInterface = {
   username: "Yuriy",
   avatarUrl: "img/avatar.png"
 }
-localStorage.removeItem("user");
-localStorage.removeItem("favoritesAmount");
-localStorage.setItem("user", JSON.stringify(userStorage));
-localStorage.setItem("favoritesAmount", "5");
-
-
+if (typeof window !== 'undefined') {
+  localStorage.removeItem("user");
+  localStorage.removeItem("favoritesAmount");
+  localStorage.setItem("user", JSON.stringify(userStorage));
+  localStorage.setItem("favoritesAmount", "5");
+}
 export const getUserData = (): UserInterface => {
   let user: unknown;
   user = localStorage.getItem("user");

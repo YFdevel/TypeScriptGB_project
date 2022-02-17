@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e858976b-d898-4e2c-91da-25062be8a74c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/getCollection.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/flat-rent-sdk.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/flat-rent-sdk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scripts/getUserData.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/scripts/getUserData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scripts/search-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/scripts/search-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getCollection.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/getCollection.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/getUserData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/getUserData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/search-form.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/search-form.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +41,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
-  </component>
   <component name="ProjectId" id="243FVHCuL0FYGcV99Y31obsATkZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -47,7 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\Programming\GeekBrains\Практика\TypeScript\TypeScriptProject_For_Git\node_modules\typescript\lib" />
@@ -55,6 +58,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programming\GeekBrains\Практика\TypeScript\TypeScriptProject_For_Git\src" />
       <recent name="D:\Programming\GeekBrains\Практика\TypeScript\lesson1\public\img" />
     </key>
   </component>
@@ -85,7 +89,11 @@
       <workItem from="1644569795334" duration="820000" />
       <workItem from="1644582273311" duration="3279000" />
       <workItem from="1644652424758" duration="5609000" />
-      <workItem from="1644771838954" duration="2765000" />
+      <workItem from="1644771838954" duration="6461000" />
+      <workItem from="1644816671559" duration="7205000" />
+      <workItem from="1645017377322" duration="658000" />
+      <workItem from="1645032812538" duration="12193000" />
+      <workItem from="1645074704563" duration="5331000" />
     </task>
     <servers />
   </component>

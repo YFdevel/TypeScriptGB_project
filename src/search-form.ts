@@ -2,13 +2,26 @@ import {renderBlock} from './lib.js'
 import {search, showData} from "./helpers.js";
 
 
-const currentDate = new Date();
-const minDateFormatted = currentDate.toISOString().split('T')[0];
-const maxDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 2, 0);
-const maxDateFormatted = new Date(maxDate.setDate(maxDate.getDate() + 1)).toISOString().split('T')[0];
-const inDate = new Date(currentDate.setDate(currentDate.getDate() + 1));
-const inDateFormatted = inDate.toISOString().split('T')[0];
-const outDateFormatted = new Date(inDate.setDate(inDate.getDate() + 2)).toISOString().split('T')[0];
+const currentDate = Date.now();
+
+export interface DateParametersInterface {
+  minDate: Date
+  minDateFormatted: string
+  maxDate: Date
+  inDate: Date
+}
+
+
+const DateParameters: DateParametersInterface = {
+  minDate: new Date(currentDate),
+  minDateFormatted: new Date(currentDate).toISOString().split('T')[0],
+  maxDate: new Date(new Date(currentDate).getFullYear(), new Date(currentDate).getMonth() + 2, 0),
+  inDate: new Date(currentDate + 24 * 60 * 60 * 1000)
+}
+
+const maxDateFormatted = new Date(DateParameters.maxDate.setDate(DateParameters.maxDate.getDate() + 1)).toISOString().split('T')[0];
+const inDateFormatted = DateParameters.inDate.toISOString().split('T')[0];
+const outDateFormatted = new Date(DateParameters.inDate.setDate(DateParameters.inDate.getDate() + 2)).toISOString().split('T')[0];
 
 
 export function renderSearchFormBlock(arrival: string = inDateFormatted, departure: string = outDateFormatted) {
@@ -31,11 +44,11 @@ export function renderSearchFormBlock(arrival: string = inDateFormatted, departu
         <div class="row">
           <div>
             <label for="check-in-date">Дата заезда</label>
-            <input id="check-in-date" type="date" value=${arrival} min=${minDateFormatted} max=${maxDateFormatted} name="checkin" />
+            <input id="check-in-date" type="date" value=${arrival} min=${DateParameters.minDateFormatted} max=${maxDateFormatted} name="checkin" />
           </div>
           <div>
             <label for="check-out-date">Дата выезда</label>
-            <input id="check-out-date" type="date" value=${departure} min=${minDateFormatted} max=${maxDateFormatted} name="checkout" />
+            <input id="check-out-date" type="date" value=${departure} min=${DateParameters.minDateFormatted} max=${maxDateFormatted} name="checkout" />
           </div>
           <div>
             <label for="max-price">Макс. цена суток</label>
@@ -49,10 +62,11 @@ export function renderSearchFormBlock(arrival: string = inDateFormatted, departu
     </form>
     `
   )
-  const form=document.getElementById("form");
-  form.onsubmit=function (e){
-    const data=search(e,(value)=>{
-      console.log(value)});
+  const form = document.getElementById("form");
+  form.onsubmit = function (e) {
+    const data = search(e, (value) => {
+      console.log(value)
+    });
     showData(data);
   };
 }
