@@ -2,12 +2,10 @@ const userStorage = {
     username: "Yuriy",
     avatarUrl: "img/avatar.png"
 };
-if (typeof window !== 'undefined') {
-    localStorage.removeItem("user");
-    localStorage.removeItem("favoritesAmount");
-    localStorage.setItem("user", JSON.stringify(userStorage));
-    localStorage.setItem("favoritesAmount", "5");
-}
+localStorage.removeItem("user");
+localStorage.removeItem("favoritesAmount");
+localStorage.setItem("user", JSON.stringify(userStorage));
+localStorage.setItem("favoritesAmount", "5");
 export const getUserData = () => {
     let user;
     user = localStorage.getItem("user");
