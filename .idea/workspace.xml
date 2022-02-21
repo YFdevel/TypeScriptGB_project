@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e858976b-d898-4e2c-91da-25062be8a74c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/public/scripts/getUserData.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/scripts/getUserData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getUserData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/getUserData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/inheritance.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/inheritance.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,15 +37,19 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="243FVHCuL0FYGcV99Y31obsATkZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../WayUP/Веб-разработчика-код фрилансера/Практика/jquery-practice" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\Programming\GeekBrains\Практика\TypeScript\TypeScriptProject_For_Git\node_modules\typescript\lib" />
@@ -83,7 +92,12 @@
       <workItem from="1644816671559" duration="7205000" />
       <workItem from="1645017377322" duration="658000" />
       <workItem from="1645032812538" duration="12193000" />
-      <workItem from="1645074704563" duration="6103000" />
+      <workItem from="1645074704563" duration="7375000" />
+      <workItem from="1645116718960" duration="2562000" />
+      <workItem from="1645254901360" duration="40000" />
+      <workItem from="1645389595879" duration="8188000" />
+      <workItem from="1645442578981" duration="6897000" />
+      <workItem from="1645462304142" duration="7694000" />
     </task>
     <servers />
   </component>
@@ -106,6 +120,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
