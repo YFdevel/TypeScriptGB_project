@@ -13,7 +13,7 @@ export interface rentParameters{
   city:string,
   priceLimit?:number
 }
-export const database: hotelData[]
+export const database: [hotelData,hotelData]
 
 export function cloneDate(date: Date): Date
 

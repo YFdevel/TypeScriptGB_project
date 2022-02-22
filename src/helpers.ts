@@ -1,6 +1,6 @@
 export interface UserInterface {
   username: string
-  avatarUrl?: string
+  avatarUrl: string
 }
 
 export interface SearchFormData {
@@ -9,7 +9,7 @@ export interface SearchFormData {
   inDate: string
   outDate: string
   maxPrice: number
-  providers?: string[]
+  providers: string[]
 }
 
 export interface Place {
@@ -17,19 +17,23 @@ export interface Place {
 }
 
 
-
-export const search = (event, callback: (value?: Place[], error?: Error) => void): SearchFormData => {
+export const search = (event: Event, callback: (value?: Place[], error?: Error) => void): SearchFormData|null => {
   event.preventDefault();
-
-  const dataForm = new FormData(event.target);
+  const {target} = event;
+  const element = target as HTMLFormElement;
+  const dataForm = new FormData(element);
   const providersElements = [...dataForm.getAll('provider')];
   let providers: string[] = []
   for (const provider of providersElements) {
     providers.push(provider.toString())
   }
   const city = dataForm.get('city');
-  const locationStr = dataForm.get('location').toString().split(",");
-  const locationNum = [Number(locationStr[0]), Number(locationStr[1])];
+  const locationStrArr = dataForm.get('location');
+  let locationNum:number[]=[]
+  if(locationStrArr) {
+    const locationStr = locationStrArr.toString().split(",");
+    locationNum = [Number(locationStr[0]), Number(locationStr[1])];
+  }
   const checkin = dataForm.get('checkin');
   const checkout = dataForm.get('checkout');
   const price = dataForm.get('price');
@@ -62,7 +66,7 @@ export const search = (event, callback: (value?: Place[], error?: Error) => void
 
 }
 
-export const showData = (data: SearchFormData): void => {
+export const showData = (data: SearchFormData|null): void => {
   if (data == null) {
     console.log('Oooopps! Введите корректные данные')
   } else {

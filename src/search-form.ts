@@ -6,7 +6,7 @@ const currentDate = Date.now();
 
 export interface DateParametersInterface {
   minDate: Date
-  minDateFormatted: string
+  minDateFormatted: string|undefined
   maxDate: Date
   inDate: Date
 }
@@ -24,7 +24,7 @@ const inDateFormatted = DateParameters.inDate.toISOString().split('T')[0];
 const outDateFormatted = new Date(DateParameters.inDate.setDate(DateParameters.inDate.getDate() + 2)).toISOString().split('T')[0];
 
 
-export function renderSearchFormBlock(arrival: string = inDateFormatted, departure: string = outDateFormatted) {
+export function renderSearchFormBlock(arrival: string|undefined = inDateFormatted, departure: string|undefined = outDateFormatted) {
   renderBlock(
     'search-form-block',
     `
@@ -62,11 +62,15 @@ export function renderSearchFormBlock(arrival: string = inDateFormatted, departu
     </form>
     `
   )
-  const form = document.getElementById("form");
+  const form: HTMLElement | null = document.getElementById("form");
+  if(form)
   form.onsubmit = function (e) {
     const data = search(e, (value) => {
       console.log(value)
     });
+    if(data)
     showData(data);
+    else
+      showData(null)
   };
 }

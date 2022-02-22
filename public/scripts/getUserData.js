@@ -5,14 +5,16 @@ const userStorage = {
 localStorage.removeItem("user");
 localStorage.removeItem("favoritesAmount");
 localStorage.setItem("user", JSON.stringify(userStorage));
-localStorage.setItem("favoritesAmount", "5");
+localStorage.setItem("favoritesAmount", "2");
 export const getUserData = () => {
     let user;
     user = localStorage.getItem("user");
     if (user == null) {
         console.log("No data");
-        alert("Отсутствуют данные пользователя");
-        return;
+        return {
+            username: "unknown",
+            avatarUrl: ""
+        };
     }
     else if (typeof user === "string") {
         const parseUser = JSON.parse(user);
@@ -20,11 +22,9 @@ export const getUserData = () => {
             console.log(`Name: ${parseUser.username}, Avatar: ${parseUser.avatarUrl}`);
             return parseUser;
         }
-        else {
-            return {
-                username: "unknown",
-                avatarUrl: ""
-            };
-        }
     }
+    return {
+        username: "unknown",
+        avatarUrl: ""
+    };
 };

@@ -46,10 +46,14 @@ export function renderSearchFormBlock(arrival = inDateFormatted, departure = out
     </form>
     `);
     const form = document.getElementById("form");
-    form.onsubmit = function (e) {
-        const data = search(e, (value) => {
-            console.log(value);
-        });
-        showData(data);
-    };
+    if (form)
+        form.onsubmit = function (e) {
+            const data = search(e, (value) => {
+                console.log(value);
+            });
+            if (data)
+                showData(data);
+            else
+                showData(null);
+        };
 }

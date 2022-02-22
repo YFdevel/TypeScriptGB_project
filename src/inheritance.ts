@@ -4,17 +4,10 @@ export interface Center {
 }
 
 export abstract class MyGraphicsPrimitive2D {
-  protected top: number;
-  protected bottom: number;
-  protected left: number;
-  protected right: number;
-
-  constructor(top?: number, left?: number, bottom?: number, right?: number) {
-    this.left = left;
-    this.top = top;
-    this.bottom = bottom;
-    this.right = right;
-  }
+  protected top: number=0;
+  protected bottom: number=0;
+  protected left: number=0;
+  protected right: number=0;
 
   moveVertical(moving: number): number {
     this.top = this.top + moving;
@@ -72,28 +65,23 @@ export class MyRectangle extends MyAreaPrimitive2D {
   public right: number;
 
   constructor(top: number, left: number, bottom: number, right: number) {
-    super(top, left, bottom, right);
+    super();
+    this.left = left;
+    this.top = top;
+    this.bottom = bottom;
+    this.right = right;
   }
 
-  width(): number | null {
-    if (this.right > this.left) {
+  width(): number {
       return this.right - this.left;
-    } else {
-      return null;
-    }
   }
 
-  height(): number | null {
-    if (this.bottom > this.top) {
+  height(): number {
       return this.bottom - this.top;
-    } else {
-      return null;
-    }
-
   }
 
   square(): number {
-    return this.width() * this.height();
+      return this.width() * this.height();
   }
 
   moveVertical(moving: number): number {

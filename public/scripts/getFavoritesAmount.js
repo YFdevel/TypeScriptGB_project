@@ -3,7 +3,7 @@ export const getFavoritesAmount = () => {
     amount = localStorage.getItem("favoritesAmount");
     if (amount == null) {
         console.log("No data");
-        return;
+        return 0;
     }
     else if (typeof amount === "string") {
         if (Number(amount) >= 1) {
@@ -12,4 +12,5 @@ export const getFavoritesAmount = () => {
             return favorites;
         }
     }
+    return 0;
 };

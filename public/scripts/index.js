@@ -4,29 +4,22 @@ import { renderUserBlock } from './user.js';
 import { renderToast } from './lib.js';
 import { getUserData } from './getUserData.js';
 import { getFavoritesAmount } from './getFavoritesAmount.js';
-import { getCollection, getTodosByCount } from './getCollection.js';
+import { getTodosByCount } from './getCollection.js';
 import { cloneDate, addDays, FlatRentSdk, database } from './flat-rent-sdk.js';
 import { MyRectangle, MyCircle } from './inheritance.js';
-getCollection("users", 1).catch((error) => {
-    throw error;
-});
-getCollection("todos", 1).catch((error) => {
-    throw error;
-});
-getCollection("posts", 1).catch((error) => {
-    throw error;
-});
-getCollection("comments", 1).catch((error) => {
-    throw error;
-});
-getCollection("photos", 2).catch((error) => {
-    throw error;
-});
-getCollection("albums", 1).catch((error) => {
-    throw error;
-});
+const rectangleMove = document.getElementById('rectangle-to-move');
+const vertical = document.getElementById('vertical');
+const horizontal = document.getElementById('horizontal');
+const circleMove = document.getElementById('circle-to-move');
+const addRectangle = document.getElementById('add-rectangle');
+const addCircle = document.getElementById('add-circle');
 getTodosByCount(7).catch((error) => {
-    throw error;
+    if (error instanceof Error) {
+        console.log(error.message);
+    }
+    else {
+        console.error(error);
+    }
 });
 console.log(cloneDate(new Date()));
 console.log(addDays(new Date(), 3));
@@ -43,20 +36,18 @@ console.log(flatRentSdk.book('vnd331', new Date(2022, 5, 1), new Date(2022, 5, 1
 console.log(flatRentSdk._generateDateRange(new Date(2022, 5, 1), new Date(2022, 5, 12)));
 console.log(flatRentSdk._areAllDatesAvailable(database[0], [new Date(2022, 5, 1), new Date(2022, 5, 12)]));
 console.log(flatRentSdk._formatFlatObject(database[1], 2));
-// flatRentSdk. _writeDatabase({
-//   id: 'vvv111',
-//   title: 'New Hotel',
-//   details: 'Отель расположен в 6 минутах ходьбы от центра.',
-//   photos: ['vvv111.png'],
-//   coordinates: [55.9322936,31.3460129],
-//   bookedDates: [],
-//   price: 16300
-// })
 console.log(flatRentSdk._readDatabase());
 window.addEventListener('DOMContentLoaded', () => {
     const userData = getUserData();
     const favoritesAmount = getFavoritesAmount();
-    renderUserBlock(userData.username, userData.avatarUrl, favoritesAmount);
+    if (userData) {
+        if (favoritesAmount) {
+            renderUserBlock(userData.username, userData.avatarUrl, favoritesAmount);
+        }
+        else {
+            renderUserBlock(userData.username, userData.avatarUrl, 0);
+        }
+    }
     renderSearchFormBlock();
     renderSearchStubBlock();
     renderToast({ text: 'Это пример уведомления. Используйте его при необходимости', type: 'success' }, {
@@ -70,30 +61,38 @@ window.addEventListener('DOMContentLoaded', () => {
     console.log('Площадь прямоугольника: ' + rectangle.square());
     console.log('Высота прямоугольника: ' + rectangle.height());
     console.log('Ширина прямоугольника: ' + rectangle.width());
-    document.getElementById('horizontal').addEventListener('input', (event) => {
-        const { target } = event;
-        const moveHorizontal = target;
-        const horizontalRec = rectangle.moveHorizontal(Number(moveHorizontal.value));
-        const horizontalCircle = circle.moveHorizontal(Number(moveHorizontal.value));
-        document.getElementById('rectangle-to-move').style.left = `${horizontalRec}px`;
-        document.getElementById('circle-to-move').style.left = `${horizontalCircle}px`;
-    });
-    document.getElementById('vertical').addEventListener('input', (event) => {
-        const { target } = event;
-        const moveVertical = target;
-        const verticalRec = rectangle.moveVertical(Number(moveVertical.value));
-        const verticalCircle = circle.moveVertical(Number(moveVertical.value));
-        document.getElementById('rectangle-to-move').style.top = `${verticalRec}px`;
-        document.getElementById('circle-to-move').style.top = `${verticalCircle}px`;
-    });
-    document.getElementById('add-rectangle').addEventListener('click', (event) => {
-        const div = document.createElement('div');
-        document.body.appendChild(div);
-        div.insertAdjacentHTML("beforeend", rectangle.paintRectangle(50, 300, 150, 150));
-    });
-    document.getElementById('add-circle').addEventListener('click', (event) => {
-        const div = document.createElement('div');
-        document.body.appendChild(div);
-        div.insertAdjacentHTML("beforeend", circle.paintCircle(300, 500, 200));
-    });
+    if (horizontal)
+        horizontal.addEventListener('input', (event) => {
+            const { target } = event;
+            const moveHorizontal = target;
+            const horizontalRec = rectangle.moveHorizontal(Number(moveHorizontal.value));
+            const horizontalCircle = circle.moveHorizontal(Number(moveHorizontal.value));
+            if (rectangleMove)
+                rectangleMove.style.left = `${horizontalRec}px`;
+            if (circleMove)
+                circleMove.style.left = `${horizontalCircle}px`;
+        });
+    if (vertical)
+        vertical.addEventListener('input', (event) => {
+            const { target } = event;
+            const moveVertical = target;
+            const verticalRec = rectangle.moveVertical(Number(moveVertical.value));
+            const verticalCircle = circle.moveVertical(Number(moveVertical.value));
+            if (rectangleMove)
+                rectangleMove.style.top = `${verticalRec}px`;
+            if (circleMove)
+                circleMove.style.top = `${verticalCircle}px`;
+        });
+    if (addRectangle)
+        addRectangle.addEventListener('click', () => {
+            const div = document.createElement('div');
+            document.body.appendChild(div);
+            div.insertAdjacentHTML("beforeend", rectangle.paintRectangle(50, 300, 150, 150));
+        });
+    if (addCircle)
+        addCircle.addEventListener('click', () => {
+            const div = document.createElement('div');
+            document.body.appendChild(div);
+            div.insertAdjacentHTML("beforeend", circle.paintCircle(300, 500, 200));
+        });
 });

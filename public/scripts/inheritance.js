@@ -1,9 +1,9 @@
 export class MyGraphicsPrimitive2D {
-    constructor(top, left, bottom, right) {
-        this.left = left;
-        this.top = top;
-        this.bottom = bottom;
-        this.right = right;
+    constructor() {
+        this.top = 0;
+        this.bottom = 0;
+        this.left = 0;
+        this.right = 0;
     }
     moveVertical(moving) {
         this.top = this.top + moving;
@@ -44,23 +44,17 @@ export class MyCircle extends MyAreaPrimitive2D {
 }
 export class MyRectangle extends MyAreaPrimitive2D {
     constructor(top, left, bottom, right) {
-        super(top, left, bottom, right);
+        super();
+        this.left = left;
+        this.top = top;
+        this.bottom = bottom;
+        this.right = right;
     }
     width() {
-        if (this.right > this.left) {
-            return this.right - this.left;
-        }
-        else {
-            return null;
-        }
+        return this.right - this.left;
     }
     height() {
-        if (this.bottom > this.top) {
-            return this.bottom - this.top;
-        }
-        else {
-            return null;
-        }
+        return this.bottom - this.top;
     }
     square() {
         return this.width() * this.height();

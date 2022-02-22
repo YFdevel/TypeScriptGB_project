@@ -8,25 +8,26 @@ const userStorage: UserInterface = {
   localStorage.removeItem("user");
   localStorage.removeItem("favoritesAmount");
   localStorage.setItem("user", JSON.stringify(userStorage));
-  localStorage.setItem("favoritesAmount", "5");
+  localStorage.setItem("favoritesAmount", "2");
 
-export const getUserData = (): UserInterface => {
+export const getUserData = (): UserInterface|undefined=> {
   let user: unknown;
   user = localStorage.getItem("user");
   if (user == null) {
     console.log("No data");
-    alert("Отсутствуют данные пользователя")
-    return
+    return {
+      username: "unknown",
+      avatarUrl: ""
+    }
   } else if (typeof user === "string") {
     const parseUser = JSON.parse(user);
     if (parseUser.username && parseUser.avatarUrl && parseUser.username !== '') {
       console.log(`Name: ${parseUser.username}, Avatar: ${parseUser.avatarUrl}`);
       return parseUser
-    } else {
-      return {
-        username: "unknown",
-        avatarUrl: ""
-      }
     }
+  }
+  return {
+    username: "unknown",
+    avatarUrl: ""
   }
 }

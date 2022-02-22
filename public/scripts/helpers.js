@@ -1,14 +1,20 @@
 export const search = (event, callback) => {
     event.preventDefault();
-    const dataForm = new FormData(event.target);
+    const { target } = event;
+    const element = target;
+    const dataForm = new FormData(element);
     const providersElements = [...dataForm.getAll('provider')];
     let providers = [];
     for (const provider of providersElements) {
         providers.push(provider.toString());
     }
     const city = dataForm.get('city');
-    const locationStr = dataForm.get('location').toString().split(",");
-    const locationNum = [Number(locationStr[0]), Number(locationStr[1])];
+    const locationStrArr = dataForm.get('location');
+    let locationNum = [];
+    if (locationStrArr) {
+        const locationStr = locationStrArr.toString().split(",");
+        locationNum = [Number(locationStr[0]), Number(locationStr[1])];
+    }
     const checkin = dataForm.get('checkin');
     const checkout = dataForm.get('checkout');
     const price = dataForm.get('price');
